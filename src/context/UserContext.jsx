@@ -7,9 +7,12 @@ export function UserContextProvider ({children}) {
     const [user, setUser] = useState();
     
     const register = (newUser) => setUser(newUser);
+    //logout
+    const logout = () => setUser(null);
+
 
     return ( 
-        <UserContext.Provider value={{user, register}}>
+        <UserContext.Provider value={{user, register, logout}}>
             {children}
         </UserContext.Provider>
     )

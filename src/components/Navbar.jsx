@@ -1,7 +1,12 @@
+import { useContext } from "react";
 import { Link } from "react-router";
+import { UserContext } from "../context/UserContext";
 
 
 export default function Navbar(){
+
+    const { user } = useContext(UserContext);
+
     return (
         <nav className="custom-nav p-4 d-flex justify-content-between">
             <ul>
@@ -16,9 +21,15 @@ export default function Navbar(){
                 <li>
                    <Link to={'/login'}>Login</Link>
                 </li>
-                <li>
-                    <Link to={'/register'}>Register</Link>
-                </li>
+                {(!user && (
+                    <li>
+                        <Link to={'/register'}>Register</Link>
+                    </li>
+                )) || (
+                    <li>
+                        <p>{user.name}</p>
+                    </li>
+                ) }
             </ul> 
         </nav>
     )
