@@ -5,7 +5,7 @@ import { UserContext } from "../context/UserContext";
 
 export default function Navbar(){
 
-    const { user } = useContext(UserContext);
+    const { user, logout } = useContext(UserContext);
 
     return (
         <nav className="custom-nav p-4 d-flex justify-content-between">
@@ -26,9 +26,14 @@ export default function Navbar(){
                         <Link to={'/register'}>Register</Link>
                     </li>
                 )) || (
-                    <li>
-                        <p>{user.name}</p>
-                    </li>
+                    <>
+                        <li>
+                            <p>{user.name}</p>
+                        </li>
+                        <li>
+                            <button id="logout_btn" onClick={logout}>Logout</button>
+                        </li>
+                    </>
                 ) }
             </ul> 
         </nav>
