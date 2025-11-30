@@ -1,5 +1,6 @@
 import { useContext, useState } from "react"
 import { UserContext } from "../context/UserContext"
+import { useNavigate } from "react-router";
 
 export default function Register() {
 
@@ -9,6 +10,8 @@ export default function Register() {
     const [surname, setSurname] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+
+    const navigate = useNavigate();
 
     const handleChange = (e) => {
         if (e.target.id === "name") {
@@ -28,6 +31,7 @@ export default function Register() {
         if(name && surname && email && password){
             register({ name, surname, email, password });
         }
+        navigate('/');
     }
 
 

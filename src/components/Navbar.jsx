@@ -13,9 +13,11 @@ export default function Navbar(){
                 <li>
                    <Link to={'/'}>Home</Link>
                 </li>
-                <li>
+                {user && (
+                  <li>
                     <Link to={'/posts'}>Posts</Link>
-                </li>
+                </li>  
+                )}
             </ul> 
             <ul>
                 <li>
