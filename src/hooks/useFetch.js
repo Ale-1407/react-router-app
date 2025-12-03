@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-export default function useFetch(url) {
+export default function useFetch(url, ...dependencies) {
 
     const [data, setData] = useState();
 
@@ -16,7 +16,8 @@ export default function useFetch(url) {
         };
 
         fetchData();
-    }, []);
+        }, dependencies
+    );
 
     return data;
 }
