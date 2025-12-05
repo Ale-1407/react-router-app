@@ -38,19 +38,19 @@ export default function Register() {
 
     return (
         <>
-            <div className="container mt-4 w-50">
-                <h1 className="space text-center mb-4">Register</h1>
+            <div className="">
+                <h1 className="space">Register</h1>
 
                 <form onSubmit={handleSubmit}>
-                    <div className="d-flex flex-column align-items-center">
-                        <div className="d-flex flex-column gap-3 w-50 mb-4">
-                            <input className="form-control" type="text" placeholder="Name" id="name" onChange={handleChange} />
-                            <input className="form-control" type="text" placeholder="Surname" id="surname" onChange={handleChange} />
-                            <input className="form-control" type="email" placeholder="Email" id="email" onChange={handleChange} />
-                            <input className="form-control" type="password" placeholder="Password" id="password" onChange={handleChange} />
+                    <div className="">
+                        <div className="">
+                            <input className="" type="text" placeholder="Surname" id="surname" onChange={handleChange} />
+                            <input className="" type="email" placeholder="Email" id="email" onChange={handleChange} />
+                            <input className="" type="password" placeholder="Password" id="password" onChange={handleChange} />
+                            <input className="" type="text" placeholder="Name" id="name" onChange={handleChange} />
                         </div>
                         
-                        <button className="btn btn-outline-dark w-25">Register</button>
+                        <button className="">Register</button>
                     </div>
                 </form>
             </div>

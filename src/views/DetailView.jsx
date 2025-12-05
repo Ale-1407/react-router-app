@@ -7,8 +7,8 @@ export default function DetailView() {
     return (
         <>
             <h1 className="space">Detail Page</h1>
-            <h2 className="ps-4">Id: {post.id}</h2>
-            <div className="p-4">
+            <h2 className="">Id: {post.id}</h2>
+            <div className="">
                 <p>Title: {post.title}</p>
                 <p>Body: {post.body}</p>
             </div>

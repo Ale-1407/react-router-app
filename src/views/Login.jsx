@@ -1,14 +1,14 @@
 export default function Login() {
     return (
         <>
-            <div className="container mt-4 w-50">
-                <h1 className="space text-center mb-4">Login</h1>
+            <div className="">
+                <h1 className="space">Login</h1>
 
                 <form>
-                    <div className="d-flex flex-column align-items-center">
-                        <input className="form-control mb-3 w-50" type="email" placeholder="Email" />
-                        <input className="form-control mb-3 w-50" type="password" placeholder="Password" />
-                        <button className="btn btn-outline-dark w-25">Login</button>
+                    <div className="">
+                        <input className="" type="email" placeholder="Email" />
+                        <input className="" type="password" placeholder="Password" />
+                        <button className="">Login</button>
                     </div>
                 </form>
             </div>
