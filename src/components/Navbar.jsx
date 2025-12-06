@@ -26,27 +26,27 @@ export default function Navbar() {
           </ul>
         </div>
         <div className="navbar-end flex gap-x-2">
-          <Link className="btn" to={"/login"}>
-            Login
-          </Link>
           {(!user && (
             <Link className="btn" to={"/register"}>
               Register
             </Link>
           )) || (
             <>
-              <ul>
+              <ul className="flex items-center">
                 <li>
-                  <p>{user.name}</p>
+                  <p className="pe-2">{user.name}</p>
                 </li>
                 <li>
-                  <button id="logout_btn" onClick={logout}>
+                  <button className="btn" id="logout_btn" onClick={logout}>
                     Logout
                   </button>
                 </li>
               </ul>
             </>
           )}
+          <Link className="btn" to={"/login"}>
+            Login
+          </Link>
         </div>
       </div>
     </>
