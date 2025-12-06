@@ -36,46 +36,51 @@ export default function Register() {
   return (
     <>
       <div className="flex justify-center items-center min-h-[calc(100vh-4rem)]">
-        <fieldset
-          onSubmit={handleSubmit}
-          className="fieldset bg-base-200 border-base-300 rounded-box w-md border p-6"
-        >
-          <legend className="fieldset-legend">Register</legend>
+        <form onSubmit={handleSubmit}>
+          <fieldset className="fieldset bg-base-200 border-base-300 rounded-box w-md border p-6">
+            <legend className="fieldset-legend">Register</legend>
 
-          <label className="label">Name</label>
-          <input
-            type="text"
-            className="input w-full"
-            placeholder="Name"
-            onChange={handleChange}
-          />
+            <label className="label">Name</label>
+            <input
+              id="name"
+              type="text"
+              className="input w-full"
+              placeholder="Name"
+              onChange={handleChange}
+            />
 
-          <label className="label">Surname</label>
-          <input
-            type="text"
-            className="input w-full"
-            placeholder="Surname"
-            onChange={handleChange}
-          />
+            <label className="label">Surname</label>
+            <input
+              id="surname"
+              type="text"
+              className="input w-full"
+              placeholder="Surname"
+              onChange={handleChange}
+            />
 
-          <label className="label">Email</label>
-          <input
-            type="email"
-            className="input w-full"
-            placeholder="Email"
-            onChange={handleChange}
-          />
+            <label className="label">Email</label>
+            <input
+              id="email"
+              type="email"
+              className="input w-full"
+              placeholder="Email"
+              onChange={handleChange}
+            />
 
-          <label className="label">Password</label>
-          <input
-            type="password"
-            className="input w-full"
-            placeholder="Password"
-            onChange={handleChange}
-          />
+            <label className="label">Password</label>
+            <input
+              id="password"
+              type="password"
+              className="input w-full"
+              placeholder="Password"
+              onChange={handleChange}
+            />
 
-          <button className="btn btn-neutral mt-4">Register</button>
-        </fieldset>
+            <button type="submit" className="btn btn-neutral mt-4">
+              Register
+            </button>
+          </fieldset>
+        </form>
       </div>
     </>
   );
