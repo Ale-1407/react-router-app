@@ -6,8 +6,6 @@ import { UserContext } from "../context/UserContext";
 export default function Navbar() {
   const { user, logout } = useContext(UserContext);
 
-  /* const [scrolled, scrollY] = useScroll(); */
-
   return (
     <>
       <div className="navbar bg-base-100 shadow-sm">
@@ -34,7 +32,7 @@ export default function Navbar() {
             <>
               <ul className="flex items-center">
                 <li>
-                  <p className="pe-2">{user.name}</p>
+                  <p className="pe-2">Ciao {user.name}!</p>
                 </li>
                 <li>
                   <button className="btn" id="logout_btn" onClick={logout}>
